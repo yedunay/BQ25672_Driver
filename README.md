@@ -1,7 +1,9 @@
 # BQ25672 Embedded Driver
 
 **Author:** Yunus Emre DUNAY
+
 **Language:** C (C99)
+
 **Target MCU:** STM32G0 / STM32 HAL (I2C Peripheral)
 
 ---
