@@ -6,7 +6,6 @@
 
 **Target MCU:** STM32G0 / STM32 HAL (I2C Peripheral)
 
----
 
 ## 📖 Project Description
 
@@ -16,7 +15,6 @@ The BQ25672 is a highly integrated, I2C-programmable, 2-cell charger IC supporti
 This driver has been specifically written from scratch in **C** for projects requiring **robust and clean hardware abstraction** when interacting with the BQ25672 through STM32 HAL I2C libraries.
 The driver is designed with maintainability, readability, and future extension in mind.
 
----
 
 ## 🚀 Motivation
 
@@ -29,7 +27,6 @@ This project aims to provide:
 ✅ **Comprehensive JEITA, NTC, safety, timers, watchdog, MPPT management**
 ✅ **Separation of concerns (No application logic included)**
 
----
 
 ## 📂 Project Structure
 
@@ -39,7 +36,6 @@ This project aims to provide:
  ┣ 📄 bq25672.c      # Implementation: Getter / Setter / Apply / Read / Reset / Init
 ```
 
----
 
 ## ⚙️ Key Features
 
@@ -53,7 +49,6 @@ This project aims to provide:
 * Status & flag management (charger states, faults)
 * Hardware reset, software reset, full read-back support
 
----
 
 ## 📥 API Overview
 
@@ -104,7 +99,7 @@ bq25672_hard_reset();
 bq25672_init();
 ```
 
----
+
 
 ## 🔧 Usage Example (Basic Flow)
 
@@ -121,7 +116,6 @@ if (bq25672_apply_config(&hi2c1, &config) != BQ25672_OK) {
 }
 ```
 
----
 
 ## 💡 Why Struct-Based?
 
@@ -130,7 +124,7 @@ if (bq25672_apply_config(&hi2c1, &config) != BQ25672_OK) {
 * Guarantees consistency between software representation and IC status
 * Improves maintainability and future scalability
 
----
+
 
 ## 🔌 I2C Requirements
 
@@ -144,13 +138,13 @@ I2C_HandleTypeDef hi2c1;
 bq25672_apply_config(&hi2c1, &config);
 ```
 
----
+
 
 ## 🧪 Verification
 
 The driver was validated on hardware with STM32G030F6 MCU communicating to BQ25672 over I2C. ADC readings, fault flags, status checks and all configuration parameters were verified through oscilloscope & logic analyzer measurements.
 
----
+
 
 ## 📊 Dependencies
 
@@ -159,14 +153,14 @@ The driver was validated on hardware with STM32G030F6 MCU communicating to BQ256
 | STM32 HAL | I2C Peripheral Access |
 | C99       | Language Standard     |
 
----
+
 
 ## ❗ Known Limitations
 
 * Designed for STM32 HAL I2C, not portable as-is to other I2C frameworks (bare-metal rewrite required)
 * No application-layer logic is provided (state machines, UI, etc. out of scope)
 
----
+
 
 ## ✍️ Future Work
 
@@ -174,7 +168,7 @@ The driver was validated on hardware with STM32G030F6 MCU communicating to BQ256
 * Optional interrupt-driven status handling
 * DMA I2C transfer options
 
----
+
 
 ## 📞 Contact
 
