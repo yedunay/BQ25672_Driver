@@ -1231,5 +1231,6 @@ bq25672_status_t bq25672_read_config(I2C_HandleTypeDef *hi2c, bq25672_config_t *
 
 bq25672_status_t bq25672_init(I2C_HandleTypeDef *hi2c, const bq25672_config_t *config);
 bq25672_status_t bq25672_soft_reset(I2C_HandleTypeDef *hi2c);
+bq25672_status_t bq25672_hard_reset(I2C_HandleTypeDef *hi2c);
 
 #endif /* INC_BQ25672_H_ */
